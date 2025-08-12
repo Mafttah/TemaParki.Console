@@ -34,21 +34,41 @@ Console.WriteLine("Giris Kontrolu");
 
 if (Ziyaretci_yasi > MinYas && Ziyaretci_boyu > MinBoy)
 {
-    ;
+    Console.WriteLine($"Merhaba {Ziyaretci_adi}, yasiniz ve boyunuz hiz treni icin uygun.");
 }
 
-Console.WriteLine($"Merhaba {Ziyaretci_adi}, yasiniz ve boyunuz hiz treni icin uygun.");
-
-Console.WriteLine("Bilet ve Odeme Kontrolu");
-
-if (Ziyaretci_bakiyesi >= BiletFiyati || ozel_macera_karti)
+else if (Ziyaretci_yasi < MinYas) ;
 {
-    decimal para_ustu = Ziyaretci_bakiyesi - BiletFiyati;
-    Console.WriteLine($"Biletiniz alindi. Para ustunuz -> {para_ustu} TL. Iyi eglenceler.");
+    Console.WriteLine("Yasiniz kucuk. Iceri giremezsiniz, uzgunuz.");
 }
 
-if (Ziyaretci_bakiyesi < BiletFiyati || ozel_macera_karti) ;
-        Console.WriteLine("Ozel kart ile giris yaptiniz. Iyi eglenceler.");
+else if (Ziyaretci_boyu < MinBoy) ;
+{
+    Console.WriteLine("Boyunuz kucuk. Iceri giremezsiniz, uzgunuz.");
+}
+
+Console.WriteLine("Bilet ve Odeme Kontrolu\n");
+
+if (Ziyaretci_bakiyesi < BiletFiyati && ozel_macera_karti == false)
+{
+Console.WriteLine("Bilet alabilmek icin yeterli bakiyeniz ve ozel macera kartiniz yok. Iceri giremezsiniz, uzgunuz.");
+}
+else if (Ziyaretci_bakiyesi >= BiletFiyati || ozel_macera_karti == false)
+{
+decimal para_ustu = Ziyaretci_bakiyesi - BiletFiyati;
+Console.WriteLine($"Biletiniz alindi. Para ustunuz -> {para_ustu} TL. Iyi eglenceler.");
+}
+
+else if (Ziyaretci_bakiyesi < BiletFiyati || ozel_macera_karti == true)
+{
+Console.WriteLine("Ozel kart ile giris yaptiniz. Iyi eglenceler.");
+}
+else if (Ziyaretci_bakiyesi < BiletFiyati && ozel_macera_karti == false)
+{
+    Console.WriteLine("Bilet alabilmek icin yeterli bakiyeniz yok. Iceri giremezsiniz, uzgunuz.");
+}
+
+        
 
 
 
