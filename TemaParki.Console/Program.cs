@@ -4,7 +4,7 @@ string Ziyaretci_adi;
 int Ziyaretci_yasi;
 double Ziyaretci_boyu;
 decimal Ziyaretci_bakiyesi;
-bool Ozel_macera_karti = true;
+bool ozel_macera_karti = true;
 
 int MinYas = 16;
 double MinBoy = 1.55;
@@ -27,7 +27,7 @@ Ziyaretci_bakiyesi = Convert.ToDecimal(Console.ReadLine());
 Console.WriteLine("-----");
 
 Console.WriteLine("Ozel macera kartiniz var mi: (true/false)");
-Ozel_macera_karti = Convert.ToBoolean(Console.ReadLine());
+ozel_macera_karti = Convert.ToBoolean(Console.ReadLine());
 Console.WriteLine("-----");
 
 Console.WriteLine("Giris Kontrolu");
@@ -41,13 +41,13 @@ Console.WriteLine($"Merhaba {Ziyaretci_adi}, yasiniz ve boyunuz hiz treni icin u
 
 Console.WriteLine("Bilet ve Odeme Kontrolu");
 
-if (Ziyaretci_bakiyesi >= BiletFiyati || Ozel_macera_karti)
+if (Ziyaretci_bakiyesi >= BiletFiyati || ozel_macera_karti)
 {
     decimal para_ustu = Ziyaretci_bakiyesi - BiletFiyati;
     Console.WriteLine($"Biletiniz alindi. Para ustunuz -> {para_ustu} TL. Iyi eglenceler.");
 }
 
-if (Ziyaretci_bakiyesi < BiletFiyati || Ozel_macera_karti);
+if (Ziyaretci_bakiyesi < BiletFiyati || ozel_macera_karti) ;
         Console.WriteLine("Ozel kart ile giris yaptiniz. Iyi eglenceler.");
 
 
