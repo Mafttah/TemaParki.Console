@@ -5,6 +5,9 @@ int Ziyaretci_yasi;
 double Ziyaretci_boyu;
 decimal Ziyaretci_bakiyesi;
 bool ozel_macera_karti = true;
+bool yaninda_ebebeyin_var = true;
+bool gozluk_var = true;
+
 
 int MinYas = 16;
 double MinBoy = 1.55;
@@ -42,10 +45,22 @@ else if (Ziyaretci_yasi < MinYas) ;
     Console.WriteLine("Yasiniz kucuk. Iceri giremezsiniz, uzgunuz.");
 }
 
+else if (Ziyaretci_yasi < MinYas && yaninda_ebebeyin_var == true)
+{
+    Console.WriteLine($"Merhaba {Ziyaretci_adi}, yasiniz hiz treni icin uygun degil ama yaninizda ebeveyniniz ile birlikte giris yapabilirsiniz.");
+}
 else if (Ziyaretci_boyu < MinBoy) ;
 {
     Console.WriteLine("Boyunuz kucuk. Iceri giremezsiniz, uzgunuz.");
 }
+
+else if (gozluk_var == true)
+
+    {
+    Console.WriteLine($"Merhaba {Ziyaretci_adi}, hiz trenine gozlukle binemezsiniz. Gozlugu cikarirsaniz o zaman hiz trenine binebilirsiniz.");
+}
+
+
 
 Console.WriteLine("Bilet ve Odeme Kontrolu\n");
 
