@@ -42,12 +42,12 @@ else if (Ziyaretci_yasi < MinYas) ;
     Console.WriteLine("Yasiniz kucuk. Iceri giremezsiniz, uzgunuz.");
 }
 
-else if (Ziyaretci_boyu < MinBoy) ;
+if (Ziyaretci_boyu < MinBoy) ;
 {
     Console.WriteLine("Boyunuz kucuk. Iceri giremezsiniz, uzgunuz.");
 }
 
-Console.WriteLine("Bilet ve Odeme Kontrolu\n");
+Console.WriteLine("/nBilet ve Odeme Kontrolu\n");
 
 if (Ziyaretci_bakiyesi < BiletFiyati && ozel_macera_karti == false)
 {
