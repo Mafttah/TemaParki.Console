@@ -51,17 +51,17 @@ Console.WriteLine("Bilet ve Odeme Kontrolu\n");
 
 if (Ziyaretci_bakiyesi < BiletFiyati && ozel_macera_karti == false)
 {
-Console.WriteLine("Bilet alabilmek icin yeterli bakiyeniz ve ozel macera kartiniz yok. Iceri giremezsiniz, uzgunuz.");
+    Console.WriteLine("Bilet alabilmek icin yeterli bakiyeniz ve ozel macera kartiniz yok. Iceri giremezsiniz, uzgunuz.");
 }
 else if (Ziyaretci_bakiyesi >= BiletFiyati || ozel_macera_karti == false)
 {
-decimal para_ustu = Ziyaretci_bakiyesi - BiletFiyati;
-Console.WriteLine($"Biletiniz alindi. Para ustunuz -> {para_ustu} TL. Iyi eglenceler.");
+    decimal para_ustu = Ziyaretci_bakiyesi - BiletFiyati;
+    Console.WriteLine($"Biletiniz alindi. Para ustunuz -> {para_ustu} TL. Iyi eglenceler.");
 }
 
 else if (Ziyaretci_bakiyesi < BiletFiyati || ozel_macera_karti == true)
 {
-Console.WriteLine("Ozel kart ile giris yaptiniz. Iyi eglenceler.");
+    Console.WriteLine("Ozel kart ile giris yaptiniz. Iyi eglenceler.");
 }
 else if (Ziyaretci_bakiyesi < BiletFiyati && ozel_macera_karti == false)
 {
